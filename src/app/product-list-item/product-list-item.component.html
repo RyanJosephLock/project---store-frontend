@@ -1,0 +1,21 @@
+<div>
+    <img src="{{ product.image }}">
+</div>
+<h2>{{ product.name }}</h2>
+<div>
+    {{ product.category }}<br>
+    {{ product.description }}<br>
+    <div class="price" [ngClass]="{'discount-price': product.discount > 0 }">{{ getSellPrice(product) }}</div>
+    <div class="discount-price" *ngIf="product.discount > 0"><span class="discount-strike">WAS ${{ product.price }}</span> SAVE ${{ product.discount }}</div>
+</div>
+
+<button (click)="addToCart(product)">Add to cart</button>
+
+<div *ngIf="this.shoppingCartService.wishlistMap.has(product.id); else notWishlisted">
+    <button (click)="removeFromWishlist(product)">Remove from wishlist</button>
+</div>
+<ng-template #notWishlisted>
+    <button (click)="addToWishlist(product)">Add to wishlist</button>
+</ng-template>
+
+<br>
