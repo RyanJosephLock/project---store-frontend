@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
+
 import { Product } from '../models/products';
 import { ShoppingCartService } from '../services/shopping-cart.service';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-product-list-item',
@@ -12,7 +14,7 @@ export class ProductListItemComponent {
   // Input the products from the parent component
   @Input() product: Product;
 
-  constructor(public shoppingCartService: ShoppingCartService) {
+  constructor(public shoppingCartService: ShoppingCartService, public productService: ProductService) {
     // Initialize product properties
     this.product = {
       id: 0,
@@ -23,22 +25,6 @@ export class ProductListItemComponent {
       discount: 0,
       image: '',
     }
-  }
-
-  getSellPrice(product: Product): number {
-    return product.price - product.discount;
-  }
-  
-  addToCart(product: Product): void {
-    this.shoppingCartService.addToCart(product);
-  }
-
-  addToWishlist(product: Product): void {
-    this.shoppingCartService.addToWishlist(product);
-  }
-
-  removeFromWishlist(product: Product): void {
-    this.shoppingCartService.removeFromWishlist(product);
   }
 
 }

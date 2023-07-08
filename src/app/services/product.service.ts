@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Product } from '../models/products';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ export class ProductService {
 
   constructor() { }
 
-  getProducts() {
+  getProducts(): Product[] {
     return [
       {
         id: 1,
@@ -47,6 +48,14 @@ export class ProductService {
         image: "https://dummyimage.com/200x200/000/fff.png"
       }
     ];
+  }
+
+  getSingleProduct(productid: number): Product | undefined {
+    return this.getProducts().find((product) => product.id === productid)
+  }
+
+  getSellPrice(product: Product): number {
+    return product.price - product.discount;
   }
 
 }
