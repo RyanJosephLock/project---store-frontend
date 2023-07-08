@@ -15,8 +15,8 @@ export class ShoppingCartService {
 
   constructor() { }
 
-  addToCart(product: Product): void {    
-    this.cartMap.set(product.id, (this.cartMap.get(product.id) ?? 0) + 1)
+  addToCart(product: Product, quantity: number): void {    
+    this.cartMap.set(product.id, (this.cartMap.get(product.id) ?? 0) + quantity)
     this.refreshCartQuantity();
     alert(`${product.name} added to cart!`);
   }

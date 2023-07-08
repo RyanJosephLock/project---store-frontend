@@ -1,7 +1,7 @@
 <div>
     <img src="{{ product.image }}">
 </div>
-<h2><a routerLink="/product/{{product.id}}">{{ product.name }}</a></h2>
+<h2>{{ product.name }}</h2>
 <div>
     {{ product.category }}<br>
     {{ product.description }}<br>
@@ -9,7 +9,13 @@
     <div class="discount-price" *ngIf="product.discount > 0"><span class="discount-strike">WAS ${{ product.price }}</span> SAVE ${{ product.discount }}</div>
 </div>
 
-<button (click)="this.shoppingCartService.addToCart(product)">Add to cart</button>
+<form #form="ngForm" (ngSubmit)="submitForm()">
+    <input type="number" id="quantity" name="quantity" min="1" max="100" value="1" [(ngModel)]="quantity">
+    <br>
+    <input type="submit" [disabled]="form.invalid" value="Add to cart">
+</form>
+
+<!-- <button (click)="this.shoppingCartService.addToCart(product)">Add to cart</button> -->
 
 <div *ngIf="this.shoppingCartService.wishlistMap.has(product.id); else notWishlisted">
     <button (click)="this.shoppingCartService.removeFromWishlist(product)">Remove from wishlist</button>
@@ -19,3 +25,4 @@
 </ng-template>
 
 <br>
+<div><a routerLink="">Back to all products</a></div>

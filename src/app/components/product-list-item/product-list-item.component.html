@@ -9,7 +9,7 @@
     <div class="discount-price" *ngIf="product.discount > 0"><span class="discount-strike">WAS ${{ product.price }}</span> SAVE ${{ product.discount }}</div>
 </div>
 
-<button (click)="this.shoppingCartService.addToCart(product)">Add to cart</button>
+<button (click)="this.shoppingCartService.addToCart(product, 1)">Add to cart</button>
 
 <div *ngIf="this.shoppingCartService.wishlistMap.has(product.id); else notWishlisted">
     <button (click)="this.shoppingCartService.removeFromWishlist(product)">Remove from wishlist</button>
