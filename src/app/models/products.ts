@@ -6,13 +6,5 @@ export interface Product {
     price: number;
     discount: number;
     image: string;
-}
-
-export interface CartProduct {
-    productId: number;
-    productQuantity: number;
-}
-
-export interface WishlistProduct {
-    productId: number;
+    quantity?: number;
 }

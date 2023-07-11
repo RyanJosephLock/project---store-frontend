@@ -1,1 +1,4 @@
-<p>checkout-cart works!</p>
+<app-checkout-cart-item *ngFor="let product of checkoutProducts" [product]="product"></app-checkout-cart-item>
+
+<div *ngIf="checkoutTotalPrice === 0 ; else elseBlock">Your cart is empty. <a routerLink="">Go shopping!</a></div>
+<ng-template #elseBlock>Total Price <span class="price">{{ checkoutTotalPrice }}</span></ng-template>
