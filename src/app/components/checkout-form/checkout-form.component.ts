@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { ShoppingCartService } from 'src/app/services/shopping-cart.service';
+
 @Component({
   selector: 'app-checkout-form',
   templateUrl: 'checkout-form.component.html',
@@ -10,8 +12,13 @@ export class CheckoutFormComponent {
   fullname: string = '';
   address: string = '';
   card: string = '';
-  
-  // @Output() addPost: EventEmitter<any> = new EventEmitter();
+  checkoutTotalPrice: number = 0;
+
+  constructor(private shoppingCartService: ShoppingCartService){ }
+
+  ngOnInit(): void {
+    this.checkoutTotalPrice = this.shoppingCartService.getCheckoutTotalPrice();
+  }
 
   submitForm(): void {
     const user = {
@@ -20,7 +27,7 @@ export class CheckoutFormComponent {
       card: this.card
     }
 
-    // this.addPost.emit(post);
+    // TBC action
 
     this.fullname='';
     this.address='';
