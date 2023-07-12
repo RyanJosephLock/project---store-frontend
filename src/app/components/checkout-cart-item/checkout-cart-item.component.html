@@ -8,5 +8,5 @@
     <div class="price" [ngClass]="{'discount-price': product.discount > 0 }">{{ this.productService.getSellPrice(product) }}</div>
     <div class="discount-price" *ngIf="product.discount > 0"><span class="discount-strike">WAS ${{ product.price }}</span> SAVE ${{ product.discount }}</div>
 </div>
-
+<button (click)="removeFromCart(product)">Remove from cart</button>
 <br>

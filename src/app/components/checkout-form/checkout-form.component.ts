@@ -27,7 +27,7 @@ export class CheckoutFormComponent {
       card: this.card
     }
 
-    // TBC action
+    // TBC action on form submit
 
     this.fullname='';
     this.address='';

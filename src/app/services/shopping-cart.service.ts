@@ -19,6 +19,11 @@ export class ShoppingCartService {
     alert(`${product.name} added to cart!`);
   }
 
+  removeFromCart(product: Product): void {
+    this.cartMap.delete(product.id);
+    alert(`${product.name} removed to cart!`);
+  }
+  
   addToWishlist(product: Product): void {
     this.wishlistMap.set(product.id, true)
     alert(`${product.name} added to wishlist!`)

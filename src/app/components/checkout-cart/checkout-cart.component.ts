@@ -20,4 +20,6 @@ export class CheckoutCartComponent {
     this.checkoutTotalPrice = this.shoppingCartService.getCheckoutTotalPrice()
   }
 
+  // TO DO: Consider adding the Observable Subscription to this compoonent to handle the removal of cart items. See project called "01.2-angulr-post-reader-observables"
+
 }
