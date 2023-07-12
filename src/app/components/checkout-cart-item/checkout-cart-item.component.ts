@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 import { Product } from '../../models/products'
 import { ProductService } from 'src/app/services/product.service';
@@ -12,6 +12,7 @@ import { ShoppingCartService } from 'src/app/services/shopping-cart.service';
 export class CheckoutCartItemComponent {
 
   @Input() product: Product;
+  @Output() refreshCheckout: EventEmitter<Product> = new EventEmitter;
 
   constructor(public productService: ProductService, public shoppingCartService: ShoppingCartService) {
         // Initialize product properties
@@ -29,7 +30,7 @@ export class CheckoutCartItemComponent {
 
   removeFromCart(product: Product) {
     this.shoppingCartService.removeFromCart(product)
-    //window.location.reload()
+    this.refreshCheckout.emit(product);
   }
 
 }

@@ -21,6 +21,7 @@ export class ShoppingCartService {
 
   removeFromCart(product: Product): void {
     this.cartMap.delete(product.id);
+    this.refreshCartQuantity();
     alert(`${product.name} removed to cart!`);
   }
   

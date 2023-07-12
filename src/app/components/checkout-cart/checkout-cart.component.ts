@@ -8,18 +8,17 @@ import { Product } from '../../models/products';
   templateUrl: 'checkout-cart.component.html',
   styleUrls: ['checkout-cart.component.css']
 })
-export class CheckoutCartComponent {
 
-  checkoutProducts: Product[] = [];
-  checkoutTotalPrice: number = 0;
+export class CheckoutCartComponent {
 
   constructor(private shoppingCartService: ShoppingCartService){ }
 
-  ngOnInit(): void {
-    this.checkoutProducts = this.shoppingCartService.getCheckoutProducts();
+  checkoutProducts: Product[] = this.shoppingCartService.getCheckoutProducts()
+  checkoutTotalPrice: number = this.shoppingCartService.getCheckoutTotalPrice()
+
+  refreshCheckout(product: Product): void {
+    this.checkoutProducts = this.shoppingCartService.getCheckoutProducts()
     this.checkoutTotalPrice = this.shoppingCartService.getCheckoutTotalPrice()
   }
-
-  // TO DO: Consider adding the Observable Subscription to this compoonent to handle the removal of cart items. See project called "01.2-angulr-post-reader-observables"
 
 }
