@@ -13,6 +13,7 @@ import { CheckoutThankComponent } from './components/checkout-thank/checkout-tha
 import { CheckoutCartComponent } from './components/checkout-cart/checkout-cart.component';
 import { CheckoutFormComponent } from './components/checkout-form/checkout-form.component';
 import { CheckoutCartItemComponent } from './components/checkout-cart-item/checkout-cart-item.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CheckoutCartItemComponent } from './components/checkout-cart-item/check
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
