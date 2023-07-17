@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+
 import { ShoppingCartService } from '../../services/shopping-cart.service';
 
 @Component({
@@ -7,6 +9,8 @@ import { ShoppingCartService } from '../../services/shopping-cart.service';
   styleUrls: ['header.component.css']
 })
 export class HeaderComponent {
+
+  iconShoppingCart = faShoppingCart;
   
   constructor(public shoppingCartService: ShoppingCartService) { }
 

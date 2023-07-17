@@ -1,21 +1,24 @@
-<div>
-    <img src="{{ product.image }}">
+<div class="containerList card">
+    <div class="buttonWishlist">
+        <div *ngIf="this.shoppingCartService.wishlistMap.has(product.id); else notWishlisted">
+            <button class="btn btn-secondary" (click)="this.shoppingCartService.removeFromWishlist(product)"><fa-icon [icon]="heartIcon"></fa-icon></button>
+        </div>
+        <ng-template #notWishlisted><button class="btn btn-outline-secondary" (click)="this.shoppingCartService.addToWishlist(product)"><fa-icon [icon]="heartIcon"></fa-icon></button></ng-template>
+    </div>
+    <div>
+        <a routerLink="/product/{{product.id}}">
+            <img src="{{ product.image }}">
+        </a>
+    </div>
+    <div class="contProductInfo">
+        <h2 style="margin-bottom:0px;"><a class="productName" routerLink="/product/{{product.id}}">{{ product.name }}</a></h2>
+        <div>
+            <span class="category">{{ product.category }}</span><br>
+            <div class="price" [ngClass]="{'discount-price': product.discount > 0 }">{{ this.productService.getSellPrice(product) }}</div>
+            <div class="message">
+                <div class="discount-price" style="font-size:0.75rem;" *ngIf="product.discount > 0"><span class="discount-strike">WAS ${{ product.price }}</span> SAVE ${{ product.discount }}</div>
+            </div>
+        </div>
+        <button class="btn btn-primary justified" (click)="this.shoppingCartService.addToCart(product, 1)">Add to cart</button>
+    </div>
 </div>
-<h2><a routerLink="/product/{{product.id}}">{{ product.name }}</a></h2>
-<div>
-    {{ product.category }}<br>
-    {{ product.description }}<br>
-    <div class="price" [ngClass]="{'discount-price': product.discount > 0 }">{{ this.productService.getSellPrice(product) }}</div>
-    <div class="discount-price" *ngIf="product.discount > 0"><span class="discount-strike">WAS ${{ product.price }}</span> SAVE ${{ product.discount }}</div>
-</div>
-
-<button (click)="this.shoppingCartService.addToCart(product, 1)">Add to cart</button>
-
-<div *ngIf="this.shoppingCartService.wishlistMap.has(product.id); else notWishlisted">
-    <button (click)="this.shoppingCartService.removeFromWishlist(product)">Remove from wishlist</button>
-</div>
-<ng-template #notWishlisted>
-    <button (click)="this.shoppingCartService.addToWishlist(product)">Add to wishlist</button>
-</ng-template>
-
-<br>

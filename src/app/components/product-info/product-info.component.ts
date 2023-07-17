@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'; 
+import { ActivatedRoute } from '@angular/router';
+import { faHeart, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 import { ProductService } from '../../services/product.service';
 import { ShoppingCartService } from '../../services/shopping-cart.service';
@@ -12,6 +13,9 @@ import { Product } from '../../models/products';
 })
 export class ProductInfoComponent {
 
+  heartIcon = faHeart;
+  arrowIcon = faArrowLeft;
+  
   product: Product = {
     id: 0,
     category: '',

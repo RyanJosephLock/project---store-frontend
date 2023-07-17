@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { ShoppingCartService } from '../../services/shopping-cart.service';
 import { Product } from '../../models/products';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-checkout-cart',
@@ -10,6 +11,8 @@ import { Product } from '../../models/products';
 })
 
 export class CheckoutCartComponent {
+
+  iconArrow = faArrowLeft;
 
   constructor(private shoppingCartService: ShoppingCartService){ }
 

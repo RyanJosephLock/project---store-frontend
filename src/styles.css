@@ -1,3 +1,7 @@
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
 /* GLOBAL PRODUCT ITEM STYLE */
 
 .price::before {
@@ -9,6 +13,7 @@
 
 .price {
     font-size: 2rem;
+    font-weight: bold;
     vertical-align: text-top;
 }
 
@@ -20,11 +25,81 @@
 }
 
 .discount-price {
-    color: red;
+    color: #dc3545;
 }
 
 .discount-strike {
     text-decoration: line-through;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.flexRow {
+    display: flex;
+    gap: 20px;
+}
+
+.containerList {
+    position:relative;
+    padding: 0;
+}
+
+.containerInfo {
+    position:relative;
+    width: 300px;
+    padding: 0;
+}
+
+.buttonWishlist {
+    position:absolute;
+    top:10px;
+    right:10px;
+}
+
+.productName {
+    color: black;
+    text-decoration: none;
+}
+
+.productName:hover {
+    color: grey;
+}
+
+.category {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.contProductInfo {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    height:1.5rem;
+}
+
+.justified {
+    width:100%;
+    align-self: flex-end;
+}
+
+.checkoutCartList {
+    display: flex;  
+    align-items: center; 
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.checkoutRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+.checkoutColumn {
+display: flex;
+flex-direction: column;
+flex-basis: 100%;
+flex: 1;
+}

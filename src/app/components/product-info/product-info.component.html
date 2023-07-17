@@ -1,29 +1,36 @@
 <app-header></app-header>
-<div>
-    <img src="{{ product.image }}">
+<div class="flexRow">
+    <div class="containerInfo">
+        <div class="buttonWishlist">
+            <div *ngIf="this.shoppingCartService.wishlistMap.has(product.id); else notWishlisted">
+                <button class="btn btn-secondary" (click)="this.shoppingCartService.removeFromWishlist(product)"><fa-icon [icon]="heartIcon"></fa-icon></button>
+            </div>
+            <ng-template #notWishlisted><button class="btn btn-outline-secondary" (click)="this.shoppingCartService.addToWishlist(product)"><fa-icon [icon]="heartIcon"></fa-icon></button></ng-template>
+        </div>
+        <div>
+            <a routerLink="/product/{{product.id}}">
+                <img src="{{ product.image }}">
+            </a>
+        </div>
+    </div>
+    <div>
+        <h2>{{ product.name }}</h2>
+        <div>
+            <span class="category">{{ product.category }}</span><br>
+            <hr>
+            {{ product.description }}
+            <hr>
+            <div class="price" [ngClass]="{'discount-price': product.discount > 0 }">{{ this.productService.getSellPrice(product) }}</div>
+            <div class="discount-price" style="font-size:0.75rem;" *ngIf="product.discount > 0"><span class="discount-strike">WAS ${{ product.price }}</span> SAVE ${{ product.discount }}</div>
+        </div>
+
+        <form #form="ngForm" (ngSubmit)="submitForm()">
+            <input type="number" style="margin-top: 10px;" id="quantity" name="quantity" min="1" max="100" value="1" [(ngModel)]="quantity">
+            <br>
+            <input type="submit" style="margin-top: 10px;" class="btn btn-primary" [disabled]="form.invalid" value="Add to cart">
+        </form>
+        <div style="margin-top: 20px;">
+            <a style="text-decoration: none;" routerLink=""><fa-icon [icon]="arrowIcon"></fa-icon> Back to all products</a>
+        </div>
+    </div>
 </div>
-<h2>{{ product.name }}</h2>
-<div>
-    {{ product.category }}<br>
-    {{ product.description }}<br>
-    <div class="price" [ngClass]="{'discount-price': product.discount > 0 }">{{ this.productService.getSellPrice(product) }}</div>
-    <div class="discount-price" *ngIf="product.discount > 0"><span class="discount-strike">WAS ${{ product.price }}</span> SAVE ${{ product.discount }}</div>
-</div>
-
-<form #form="ngForm" (ngSubmit)="submitForm()">
-    <input type="number" id="quantity" name="quantity" min="1" max="100" value="1" [(ngModel)]="quantity">
-    <br>
-    <input type="submit" [disabled]="form.invalid" value="Add to cart">
-</form>
-
-<!-- <button (click)="this.shoppingCartService.addToCart(product)">Add to cart</button> -->
-
-<div *ngIf="this.shoppingCartService.wishlistMap.has(product.id); else notWishlisted">
-    <button (click)="this.shoppingCartService.removeFromWishlist(product)">Remove from wishlist</button>
-</div>
-<ng-template #notWishlisted>
-    <button (click)="this.shoppingCartService.addToWishlist(product)">Add to wishlist</button>
-</ng-template>
-
-<br>
-<div><a routerLink="">Back to all products</a></div>

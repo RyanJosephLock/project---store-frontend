@@ -3,26 +3,28 @@
     top: 0;
     right: 0;
     margin: 20px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    border-radius: 9px;
 }
 
-.header{background:rgb(0, 178, 255);color:#fff;}
+.cart {
+    color: #fff;
+    font-size:28px;
+}
+
 #lblCartCount {
     font-size: 12px;
-    background: #ff0000;
+    background: #dc3545;
     color: #fff;
     padding: 0 5px;
     vertical-align: top;
     margin-left: -10px;
 }
 .badge {
-  padding-left: 9px;
-  padding-right: 9px;
-  -webkit-border-radius: 9px;
-  -moz-border-radius: 9px;
-  border-radius: 9px;
-}
-
-.label-warning[href],
-.badge-warning[href] {
-  background-color: #c67605;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 30px;
+    padding-right: 9px;
 }

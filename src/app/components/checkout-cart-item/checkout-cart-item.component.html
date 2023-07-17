@@ -1,12 +1,17 @@
-<div>
-    <img src="{{ product.image }}">
+<div class="checkoutCartList">
+    <div>
+        <img style="width:100px;" src="{{ product.image }}">
+    </div>
+    <div>
+        <a routerLink="/product/{{product.id}}">{{ product.name }}</a>
+    </div>
+    <div>
+        {{ product.quantity }}
+    </div>
+    <div>
+        ${{ this.productService.getSellPrice(product) }}.00
+    </div>
+    <div>
+        <button class="btn btn-light" (click)="removeFromCart(product)"><fa-icon [icon]="iconTrash"></fa-icon></button>
+    </div>
 </div>
-<h2><a routerLink="/product/{{product.id}}">{{ product.name }}</a></h2>
-<div>{{ product.quantity }}</div>
-<div>
-    {{ product.category }}<br>
-    <div class="price" [ngClass]="{'discount-price': product.discount > 0 }">{{ this.productService.getSellPrice(product) }}</div>
-    <div class="discount-price" *ngIf="product.discount > 0"><span class="discount-strike">WAS ${{ product.price }}</span> SAVE ${{ product.discount }}</div>
-</div>
-<button (click)="removeFromCart(product)">Remove from cart</button>
-<br>

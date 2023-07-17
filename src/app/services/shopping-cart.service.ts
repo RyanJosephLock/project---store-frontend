@@ -22,17 +22,17 @@ export class ShoppingCartService {
   removeFromCart(product: Product): void {
     this.cartMap.delete(product.id);
     this.refreshCartQuantity();
-    alert(`${product.name} removed to cart!`);
+    // alert(`${product.name} removed to cart!`);
   }
   
   addToWishlist(product: Product): void {
     this.wishlistMap.set(product.id, true)
-    alert(`${product.name} added to wishlist!`)
+    //alert(`${product.name} added to wishlist!`)
   }
 
   removeFromWishlist(product: Product): void {
     this.wishlistMap.delete(product.id)
-    alert(`${product.name} removed from wishlist!`)
+    //alert(`${product.name} removed from wishlist!`)
   }
 
   refreshCartQuantity(): void {

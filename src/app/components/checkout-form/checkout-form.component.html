@@ -1,13 +1,17 @@
 <div *ngIf="checkoutTotalPrice === 0 ; else elseBlock"></div>
 <ng-template #elseBlock>
     <form #form="ngForm" (ngSubmit)="submitForm()">
-        <h1>Checkout</h1>
+        <h2 style="margin-bottom:20px;">Checkout</h2>
+
         <label for="fullname">Full Name</label><br>
-        <input type="text" required minlength="3" name="fullname" placeholder="Min 3 Characters" [(ngModel)]="fullname"><br>
+        <input style="width: 300px; margin-bottom:20px;" type="text" required minlength="3" name="fullname" placeholder="Min 3 Characters" [(ngModel)]="fullname"><br>
+
         <label for="address">Shipping Address</label><br>
-        <textarea name="address" required minlength="6" placeholder="Min 6 characters" [(ngModel)]="address"></textarea><br>
+        <textarea style="width: 300px; margin-bottom:20px;" name="address" required minlength="6" placeholder="Min 6 characters" [(ngModel)]="address"></textarea><br>
+
         <label for="fullname">Credit Card Number</label><br>
-        <input type="text" pattern="[0-9]{16}" name="fullname" placeholder="16 Digit Number" [(ngModel)]="card"><br>
+        <input  style="width: 300px; margin-bottom:20px;" type="text" pattern="[0-9]{16}" name="fullname" placeholder="16 Digit Number" [(ngModel)]="card"><br>
+
         <input type="submit" [disabled]="form.invalid" value="Place Order" class="btn btn-primary">
     </form>
 </ng-template>
