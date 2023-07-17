@@ -15,8 +15,8 @@ export class CheckoutCartItemComponent {
   @Input() product: Product;
   @Output() refreshCheckout: EventEmitter<Product> = new EventEmitter;
 
-  iconTrash = faTrash
-  
+  iconTrash = faTrash;
+  productTotalPrice: number = 10;
 
   constructor(public productService: ProductService, public shoppingCartService: ShoppingCartService) {
         // Initialize product properties
@@ -31,6 +31,13 @@ export class CheckoutCartItemComponent {
           quantity: 0
         }
   }
+
+  ngOnInit() {
+    if(this.product.quantity) { 
+      this.productTotalPrice = this.productService.getSellPrice(this.product) * this.product.quantity 
+    }
+  }
+  
 
   removeFromCart(product: Product) {
     this.shoppingCartService.removeFromCart(product)

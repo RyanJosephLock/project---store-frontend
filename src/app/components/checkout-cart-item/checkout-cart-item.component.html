@@ -9,7 +9,7 @@
         {{ product.quantity }}
     </div>
     <div>
-        ${{ this.productService.getSellPrice(product) }}.00
+        ${{ productTotalPrice }}.00
     </div>
     <div>
         <button class="btn btn-light" (click)="removeFromCart(product)"><fa-icon [icon]="iconTrash"></fa-icon></button>
