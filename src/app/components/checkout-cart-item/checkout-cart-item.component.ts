@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 import { Product } from '../../models/products'
 import { ProductService } from 'src/app/services/product.service';
@@ -13,6 +14,9 @@ export class CheckoutCartItemComponent {
 
   @Input() product: Product;
   @Output() refreshCheckout: EventEmitter<Product> = new EventEmitter;
+
+  iconTrash = faTrash
+  
 
   constructor(public productService: ProductService, public shoppingCartService: ShoppingCartService) {
         // Initialize product properties
