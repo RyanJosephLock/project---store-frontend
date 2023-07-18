@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+
 import { Product } from '../models/products';
 
 @Injectable({
@@ -7,7 +10,15 @@ import { Product } from '../models/products';
 
 export class ProductService {
 
+  // productData:[] = [];
+
   constructor() { }
+
+  // getProducts(): Observable<[]> {
+  //   return this.http.get<[]>('data.json');
+  // }
+
+  // writeProducts()
 
   getProducts(): Product[] {
     return [
@@ -89,6 +100,13 @@ export class ProductService {
   getSingleProduct(productid: number): Product | undefined {
     return this.getProducts().find((product) => product.id === productid)
   }
+
+  // getSingleProduct(productid: number): Product | undefined {
+  //   this.getProducts().subscribe(data => {
+  //     this.productData = data;
+  //   })
+  //   return this.productData.find((product: Product) => product.id === productid)
+  // }
 
   getSellPrice(product: Product): number {
     return product.price - product.discount;
