@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Product } from '../../models/products';
 import { ProductService } from '../../services/product.service'
@@ -8,15 +8,15 @@ import { ProductService } from '../../services/product.service'
   templateUrl: 'product-list.component.html',
   styleUrls: ['product-list.component.css']
 })
-export class ProductListComponent {
+export class ProductListComponent implements OnInit {
   products: Product[] = [];
 
-  // inject dependency of productService in constructor function. Seperate multiple injected dependencies with commmas.
   constructor(private productService: ProductService) { }
 
-  // initialise component with data
   ngOnInit(): void {
-    this.products = this.productService.getProducts();
+    this.productService.getProducts().subscribe((data) =>  {
+      this.products = data;
+    });
   }
 
 }

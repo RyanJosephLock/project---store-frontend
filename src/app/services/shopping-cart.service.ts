@@ -45,7 +45,7 @@ export class ShoppingCartService {
 
   getCheckoutProducts(): Product[] {
     const checkoutProducts: Product[] = [];
-    const allProducts: Product[] = this.productService.getProducts();
+    const allProducts: Product[] = this.productService.products;
     for (const [productId, productQuantity] of this.cartMap.entries()) {
       const product = allProducts.find((product) => product.id === productId)
       if (product) {

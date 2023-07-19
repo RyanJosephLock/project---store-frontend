@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,7 +16,6 @@ import { CheckoutThankComponent } from './components/checkout-thank/checkout-tha
 import { CheckoutCartComponent } from './components/checkout-cart/checkout-cart.component';
 import { CheckoutFormComponent } from './components/checkout-form/checkout-form.component';
 import { CheckoutCartItemComponent } from './components/checkout-cart-item/checkout-cart-item.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     FontAwesomeModule
   ],

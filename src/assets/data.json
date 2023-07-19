@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "category": "Category 1",
+    "name": "Product 1",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget consequat diam, eu congue leo. Praesent aliquam urna a lacus posuere, sit amet tempor ante tincidunt. Integer et leo non leo hendrerit pellentesque. Maecenas bibendum, quam quis vehicula cursus, dolor mi pulvinar enim, vel dignissim sapien nunc posuere sem. Sed tincidunt odio ac purus convallis, eget cursus lorem interdum. Nam mauris enim, egestas eget lectus et, hendrerit posuere nisi. Aliquam pretium nec nisl eu mattis. Nulla elementum placerat orci, faucibus lacinia orci placerat eget. Vestibulum tincidunt sapien eget vehicula imperdiet. Nam gravida tellus facilisis, gravida dui rutrum, lobortis metus. Vestibulum metus tellus, laoreet eu diam at, vehicula dignissim erat.",
+    "price": 43,
+    "discount": 0,
+    "image": "https://dummyimage.com/300x300/000/fff.png"
+  },
+  {
+    "id": 2,
+    "category": "Category 1",
+    "name": "Product 2",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget consequat diam, eu congue leo. Praesent aliquam urna a lacus posuere, sit amet tempor ante tincidunt. Integer et leo non leo hendrerit pellentesque. Maecenas bibendum, quam quis vehicula cursus, dolor mi pulvinar enim, vel dignissim sapien nunc posuere sem. Sed tincidunt odio ac purus convallis, eget cursus lorem interdum. Nam mauris enim, egestas eget lectus et, hendrerit posuere nisi. Aliquam pretium nec nisl eu mattis. Nulla elementum placerat orci, faucibus lacinia orci placerat eget. Vestibulum tincidunt sapien eget vehicula imperdiet. Nam gravida tellus facilisis, gravida dui rutrum, lobortis metus. Vestibulum metus tellus, laoreet eu diam at, vehicula dignissim erat.",
+    "price": 120,
+    "discount": 53,
+    "image": "https://dummyimage.com/300x300/000/fff.png"
+  },
+  {
+    "id": 3,
+    "category": "Category 2",
+    "name": "Product 3",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget consequat diam, eu congue leo. Praesent aliquam urna a lacus posuere, sit amet tempor ante tincidunt. Integer et leo non leo hendrerit pellentesque. Maecenas bibendum, quam quis vehicula cursus, dolor mi pulvinar enim, vel dignissim sapien nunc posuere sem. Sed tincidunt odio ac purus convallis, eget cursus lorem interdum. Nam mauris enim, egestas eget lectus et, hendrerit posuere nisi. Aliquam pretium nec nisl eu mattis. Nulla elementum placerat orci, faucibus lacinia orci placerat eget. Vestibulum tincidunt sapien eget vehicula imperdiet. Nam gravida tellus facilisis, gravida dui rutrum, lobortis metus. Vestibulum metus tellus, laoreet eu diam at, vehicula dignissim erat.",
+    "price": 10,
+    "discount": 2,
+    "image": "https://dummyimage.com/300x300/000/fff.png"
+  },
+  {
+    "id": 4,
+    "category": "Category 2",
+    "name": "Product 4",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget consequat diam, eu congue leo. Praesent aliquam urna a lacus posuere, sit amet tempor ante tincidunt. Integer et leo non leo hendrerit pellentesque. Maecenas bibendum, quam quis vehicula cursus, dolor mi pulvinar enim, vel dignissim sapien nunc posuere sem. Sed tincidunt odio ac purus convallis, eget cursus lorem interdum. Nam mauris enim, egestas eget lectus et, hendrerit posuere nisi. Aliquam pretium nec nisl eu mattis. Nulla elementum placerat orci, faucibus lacinia orci placerat eget. Vestibulum tincidunt sapien eget vehicula imperdiet. Nam gravida tellus facilisis, gravida dui rutrum, lobortis metus. Vestibulum metus tellus, laoreet eu diam at, vehicula dignissim erat.",
+    "price": 2,
+    "discount": 0,
+    "image": "https://dummyimage.com/300x300/000/fff.png"
+  },
+  {
+    "id": 5,
+    "category": "Category 1",
+    "name": "Product 5",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget consequat diam, eu congue leo. Praesent aliquam urna a lacus posuere, sit amet tempor ante tincidunt. Integer et leo non leo hendrerit pellentesque. Maecenas bibendum, quam quis vehicula cursus, dolor mi pulvinar enim, vel dignissim sapien nunc posuere sem. Sed tincidunt odio ac purus convallis, eget cursus lorem interdum. Nam mauris enim, egestas eget lectus et, hendrerit posuere nisi. Aliquam pretium nec nisl eu mattis. Nulla elementum placerat orci, faucibus lacinia orci placerat eget. Vestibulum tincidunt sapien eget vehicula imperdiet. Nam gravida tellus facilisis, gravida dui rutrum, lobortis metus. Vestibulum metus tellus, laoreet eu diam at, vehicula dignissim erat.",
+    "price": 54,
+    "discount": 7,
+    "image": "https://dummyimage.com/300x300/000/fff.png"
+  },
+  {
+    "id": 6,
+    "category": "Category 1",
+    "name": "Product 6",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget consequat diam, eu congue leo. Praesent aliquam urna a lacus posuere, sit amet tempor ante tincidunt. Integer et leo non leo hendrerit pellentesque. Maecenas bibendum, quam quis vehicula cursus, dolor mi pulvinar enim, vel dignissim sapien nunc posuere sem. Sed tincidunt odio ac purus convallis, eget cursus lorem interdum. Nam mauris enim, egestas eget lectus et, hendrerit posuere nisi. Aliquam pretium nec nisl eu mattis. Nulla elementum placerat orci, faucibus lacinia orci placerat eget. Vestibulum tincidunt sapien eget vehicula imperdiet. Nam gravida tellus facilisis, gravida dui rutrum, lobortis metus. Vestibulum metus tellus, laoreet eu diam at, vehicula dignissim erat.",
+    "price": 45,
+    "discount": 0,
+    "image": "https://dummyimage.com/300x300/000/fff.png"
+  },
+  {
+    "id": 7,
+    "category": "Category 2",
+    "name": "Product 7",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget consequat diam, eu congue leo. Praesent aliquam urna a lacus posuere, sit amet tempor ante tincidunt. Integer et leo non leo hendrerit pellentesque. Maecenas bibendum, quam quis vehicula cursus, dolor mi pulvinar enim, vel dignissim sapien nunc posuere sem. Sed tincidunt odio ac purus convallis, eget cursus lorem interdum. Nam mauris enim, egestas eget lectus et, hendrerit posuere nisi. Aliquam pretium nec nisl eu mattis. Nulla elementum placerat orci, faucibus lacinia orci placerat eget. Vestibulum tincidunt sapien eget vehicula imperdiet. Nam gravida tellus facilisis, gravida dui rutrum, lobortis metus. Vestibulum metus tellus, laoreet eu diam at, vehicula dignissim erat.",
+    "price": 13,
+    "discount": 4,
+    "image": "https://dummyimage.com/300x300/000/fff.png"
+  },
+  {
+    "id": 8,
+    "category": "Category 2",
+    "name": "Product 8",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget consequat diam, eu congue leo. Praesent aliquam urna a lacus posuere, sit amet tempor ante tincidunt. Integer et leo non leo hendrerit pellentesque. Maecenas bibendum, quam quis vehicula cursus, dolor mi pulvinar enim, vel dignissim sapien nunc posuere sem. Sed tincidunt odio ac purus convallis, eget cursus lorem interdum. Nam mauris enim, egestas eget lectus et, hendrerit posuere nisi. Aliquam pretium nec nisl eu mattis. Nulla elementum placerat orci, faucibus lacinia orci placerat eget. Vestibulum tincidunt sapien eget vehicula imperdiet. Nam gravida tellus facilisis, gravida dui rutrum, lobortis metus. Vestibulum metus tellus, laoreet eu diam at, vehicula dignissim erat.",
+    "price": 65,
+    "discount": 0,
+    "image": "https://dummyimage.com/300x300/000/fff.png"
+  }
+]
