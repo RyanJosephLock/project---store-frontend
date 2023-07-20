@@ -16,7 +16,13 @@ export class ShoppingCartService {
   addToCart(product: Product, quantity: number): void {    
     this.cartMap.set(product.id, (this.cartMap.get(product.id) ?? 0) + quantity)
     this.refreshCartQuantity();
-    alert(`${product.name} added to cart!`);
+    // alert(`${product.name} added to cart!`);
+  }
+
+  overrideCart(product: Product, quantity: number): void {    
+    this.cartMap.set(product.id, quantity)
+    this.refreshCartQuantity();
+    // alert(`${product.name} added to cart!`);
   }
 
   removeFromCart(product: Product): void {

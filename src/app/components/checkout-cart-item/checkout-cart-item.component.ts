@@ -37,8 +37,12 @@ export class CheckoutCartItemComponent {
       this.productTotalPrice = this.productService.getSellPrice(this.product) * this.product.quantity 
     }
   }
-  
 
+  updateCartItem(product: Product, $event: number): void {
+    this.shoppingCartService.overrideCart(product, $event);
+    this.refreshCheckout.emit(product)
+  }
+  
   removeFromCart(product: Product) {
     this.shoppingCartService.removeFromCart(product)
     this.refreshCheckout.emit(product);

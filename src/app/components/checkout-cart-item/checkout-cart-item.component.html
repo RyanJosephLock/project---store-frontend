@@ -6,8 +6,10 @@
         <a routerLink="/product/{{product.id}}">{{ product.name }}</a>
     </div>
     <div>
-        {{ product.quantity }}
+        <label style="margin-right:.5rem;" >Quantity:</label>
+        <input style="width: 3rem;" type="number" [(ngModel)]="product.quantity" (ngModelChange)="updateCartItem(product,$event)" min="1" />
     </div>
+
     <div>
         ${{ productTotalPrice }}.00
     </div>
